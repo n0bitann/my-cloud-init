@@ -1,0 +1,14 @@
+#cloud-config
+groups:
+  - admingroup: [root,sys]
+  - cloud-users
+users:
+  - default
+  - name: tan
+    primary_group: sudoer
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDBY5WozwEXsJCCR5bVb++xZtj3Cti2kH5RQKEsyetugFY08h778mRZ7T/esUr8eTk7NTNfareHFFqc+CnB8R/3tpXsC7G5Z3IjXo7ksq74ooCQzQo2HlMCHD65CVBgTeuQKM9pYAIELcTs8diveAfnNSjtnYM5JkXuknThqcbwbqdPg3bhruaop6k34HGmezhi8c3aWqe7Dbu+z1nqUSr+GXl/TaS7zKQX7wJEQCc7sda33wi16Ed9op2KxfvV3GwxGrfU5IXrjYvf6qOuRkfR6gHXz1XCQkCq10vZ0f0MrpGf0GGLGUKwRg1Ee4hibpbKajhrESfy7GLJ4vuUGbLAca+UlLsSi/V8Hv2Qn6/nM8L9fjNclfr4Vno8xFQ5BMZUURQ0LK/AGVMBdITFees2zIDCTFDQN1UH69y/d2lCOz3xxEkTwaDN4sw6vqrruCgqiW8BerL2FzZ8s60O3mdNciwDouqYhsU1wJbHBqgcY62ZZB++ElyCu2l54uP3suM= tanpubkey
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8zwmKWN2jnWnsJlfwUjvFU/QJvri7t1ly9aRhyX4GQkBcdQCGEKcQtb6aummzMSG7ne1Dk+K61Mgk45hTsQPpdipU6NIwhCXGn1Y9gHd7nPwicFLPFGte7dO7kgjm7PcgWIGaH1svw2QarF66oGob/QRYGI3dYUcbp8xTjKnrm6MxfHHfpkpeBBOY70ov4IKQNFmQw8eKR+bO++1ixt9yLAbJ8fQN9ctnhHkPMrAQwyefuK8bH3Zn58UbyPH68Xf+e88OThU80RrRpG4Xmapmf4bn78J44B/Lru+FDhTEUXM4Y11grBK/geHOJwywARaKFv60YNI0TYfEWfmtJZPovQaicfDqVJTmz2d4R4XduZ0h+olzDGKcbVhEjV+E1ejdAHMdgXu/mKkR8IA8x+ctDKohR9kX03mgCBCNVPw4mZN70aou+1UwHM/OKU8z8YsTYepwFq7J+oaeH4wwVwCkjLeL0hhhKP3PSZRfdwbJeMzi5XnlwgnM+TYpZGweiak= thun@thuns-mac-mini
